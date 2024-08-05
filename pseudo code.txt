@@ -1,0 +1,11 @@
+#Q1
+# BEGIN
+# PROMPT "what is your age: "
+# READ age
+# CONVERT age TO INTEGER
+# IF  age > 17 THEN
+# PRINT "Legally adult age"
+# ELSE
+# PRINT "Legally not adult age"
+# ENDIF
+# END
