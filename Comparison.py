@@ -66,10 +66,17 @@
 # check_num(num)
 
 
-#Q1
-birth = int(input("what is your year of birth: "))
-age = 2024-birth
-if age >=18:
-    print(f"Your are {age}. Come in and have a drink!")
+#Q2
+# birth = int(input("what is your year of birth: "))
+# age = 2024-birth
+# if age >=18:
+#     print(f"Your are {age}. Come in and have a drink!")
+# else:
+#     print("Go away. Child.")
+
+#Q3
+name = input("Enter your name: ")
+if name == "frank" or name == "george":
+    print(f"Welcome {name}")
 else:
-    print("Go away. Child.")
+    print("Sorry you are not in list")
