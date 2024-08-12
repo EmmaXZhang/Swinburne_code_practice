@@ -74,9 +74,22 @@
 # else:
 #     print("Go away. Child.")
 
-#Q3
-name = input("Enter your name: ")
-if name.lower() == "frank" or name.lower() == "george":
-    print(f"Welcome {name}")
+#Q3 Q4
+# name = input("Enter your name: ").lower()
+# if name == "frank" or name == "george":
+#     print(f"Welcome {name}")
+# else:
+#     print("")
+
+#Q5
+login_info = {"bob":"password1234", "sally":"happy22phoebe"}
+username = input("Enter username: ").lower()
+password = input("Enter password: ")
+
+if username in login_info:
+    if password == login_info[username]:
+        print("access granted")
+    else:
+        print("access deny")
 else:
     print("")
