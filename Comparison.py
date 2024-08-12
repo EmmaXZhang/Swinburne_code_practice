@@ -76,7 +76,7 @@
 
 #Q3
 name = input("Enter your name: ")
-if name == "frank" or name == "george":
+if name.lower() == "frank" or name.lower() == "george":
     print(f"Welcome {name}")
 else:
-    print("Sorry you are not in list")
+    print("")
