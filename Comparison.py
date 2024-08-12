@@ -1,6 +1,6 @@
-#Q1
-# current_temperature = 25
-# input_temperature = int(input("Enter a temperature: "))
+# # Q1
+# current_temperature = 0.0
+# input_temperature = float(input("Enter a temperature: "))
 # if input_temperature > current_temperature:
 #     print("not freezing")
 # else:
@@ -42,22 +42,34 @@
 # check_pwd(input_pwd)
 
 # #Q5
-# def check_password(password):
-#     correct_password = "open sesame"
-#     if password == correct_password:
-#         print("The cave is now open!")
-#     else:
-#         print("Incorrect password. Try again.")
+# def check_password():
+#         pwd1 = input("what is your first password: ")
+#         if pwd1 == "open":
+#             pwd2 = input("what is your second password: ")
+#             if pwd2 == "sesame":
+#                 print("correct password")
+#             else:
+#                 print("incorrect password")
+#         else:
+#             print("incorrect password")
 #
-# input_pwd = input("what is your password: ")
-# check_password(input_pwd)
+# check_password()
 
 #Q6
-def check_num(num):
-    if num in range(1,7):
-        print("input is valid")
-    else:
-        print("input is invalid")
+# def check_num(num):
+#     if num in range(1,7):
+#         print("input is valid")
+#     else:
+#         print("input is invalid")
+#
+# num = int(input("type a number from 1 to 6: "))
+# check_num(num)
 
-num = int(input("type a number from 1 to 6: "))
-check_num(num)
+
+#Q1
+birth = int(input("what is your year of birth: "))
+age = 2024-birth
+if age >=18:
+    print(f"Your are {age}. Come in and have a drink!")
+else:
+    print("Go away. Child.")
