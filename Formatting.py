@@ -67,3 +67,4 @@ rows = [
 
 # header formatting
 print('{0:>18s}{1:>4s}{2:>6s}{3:>4s}{4:>5s}{5:>6s}{6:>6s}{7:>3s}{8:>3s}{9:>5s}{10:>5s}'.format("mpg","cyl","disp", "hp", "drat", "wt", "qsec", "vs", "am", "gear", "carb") )
+
