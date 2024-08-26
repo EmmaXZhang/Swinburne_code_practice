@@ -18,14 +18,23 @@
 # import random
 # random_num = random.randint(1,10)
 
-random_num=4
-user_input = int(input("Guess number between 1 to 10: "))
-while(user_input != random_num):
-    if(user_input > random_num):
-        print("too high")
-        user_input = int(input("Guess number between 1 to 10: "))
-    else:
-        print("too low")
-        user_input = int(input("Guess number between 1 to 10: "))
+# random_num=4
+# user_input = int(input("Guess number between 1 to 10: "))
+# while(user_input != random_num):
+#     if(user_input > random_num):
+#         print("too high")
+#         user_input = int(input("Guess number between 1 to 10: "))
+#     else:
+#         print("too low")
+#         user_input = int(input("Guess number between 1 to 10: "))
+#
+# print("Correct")
 
-print("Correct")
+#Q4
+# greeting = input("Hello, possible pirate! What's the password?")
+# if greeting in ["treasure"]:
+#     print("Greetings friend.")
+# else:
+#     print("Greetings, now walk the plank!")
+
+#Q5
