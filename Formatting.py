@@ -53,11 +53,11 @@
 #     name,age = people_items[i]
 #     print(f"{name:<15}{age:>4}")
 #     i+=1
-
-people_info = {"Bob Liang": 29, "Angelina Zg": 19, "Jane Taksanimia": 25, "Toby Mahammud": 35}
-
-for name, age in people_info.items():
-    print(f"{name:<15}{age:>4}")
+#
+# people_info = {"Bob Liang": 29, "Angelina Zg": 19, "Jane Taksanimia": 25, "Toby Mahammud": 35}
+#
+# for name, age in people_info.items():
+#     print(f"{name:<15}{age:>4}")
 
 
 
@@ -71,7 +71,90 @@ for name, age in people_info.items():
 #     ["Hornet Sportabout", 18.7, 8, 360.0, 175, 3.15, 3.440, 17.02, 0, 0, 3, 2],
 #     ["Valiant", 18.1, 6, 225.0, 105, 2.76, 3.460, 20.22, 1, 0, 3, 1]
 # ]
-#
-# # header formatting
-# print('{0:>18s}{1:>4s}{2:>6s}{3:>4s}{4:>5s}{5:>6s}{6:>6s}{7:>3s}{8:>3s}{9:>5s}{10:>5s}'.format("mpg","cyl","disp", "hp", "drat", "wt", "qsec", "vs", "am", "gear", "carb") )
 
+# header formatting
+# print('{0:>18s}{1:>4s}{2:>6s}{3:>4s}{4:>5s}{5:>6s}{6:>6s}{7:>3s}{8:>3s}{9:>5s}{10:>5s}'.format("mpg","cyl","disp", "hp", "drat", "wt", "qsec", "vs", "am", "gear", "carb"))
+
+# # Header formatting
+# header_format = '{:>21s}{:>4s}{:>6s}{:>4s}{:>6s}{:>6s}{:>6s}{:>4s}{:>4s}{:>6s}{:>6s}'
+# row_format = '{:<13s}{:>6.1f}{:>4.0f}{:>6f}{:>4.0f}{:>5.2f}{:>6.2f}{:>6.2f}{:>3.0f}{:>3.0f}{:>5.0f}'
+#
+# print(header_format.format(*header))
+#
+# # Row formatting
+# for row in rows:
+#     print(row_format.format(*row))
+
+
+
+"""
+                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+
+Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+
+Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+
+"""
+
+# car1_nm = "Hornet Sprotabout"
+#
+# car1_mpg = 18.7
+#
+# car1_cyl = 8
+#
+# car1_disp = 360.0
+#
+# car1_hp = 175
+#
+# car1_drat = 3.15
+#
+# car1_wt = 3.440
+#
+# car1_qsec = 17.02
+#
+# car1_vs = 0
+#
+# car1_am = 0
+#
+# car1_gear = 3
+#
+# car1_carb = 2
+#
+# # Header
+#
+# print("                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb")
+#
+# print("{0:19s}".format(car1_nm),end="")
+#
+# print("{0:4.1f}".format(car1_mpg),end="")
+#
+# print("{0:4d}".format(car1_cyl),end="")
+#
+# print("{0:6.1f}".format(car1_disp),end="")
+#
+# print("{0:4d}".format(car1_hp),end="")
+#
+# print("{0:5.2f}".format(car1_drat),end="")
+#
+# print("{0:6.3f}".format(car1_wt),end="")
+#
+# print("{0:6.2f}".format(car1_qsec),end="")
+#
+# print("{0:3d}".format(car1_vs),end="")
+#
+# print("{0:3d}".format(car1_am),end="")
+#
+# print("{0:5d}".format(car1_gear),end="")
+#
+# print("{0:5d}".format(car1_carb),end="")
+
+#Q6
+
+pi2 = 3.141592654
+
+max_decimal = 9
+i=1
+print(f"{'3.':>{max_decimal + 1}}")
+while i < max_decimal:
+    print(f"{pi2:>{max_decimal+1}.{i}f}")
+    i+=1
