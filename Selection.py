@@ -49,19 +49,70 @@
 # print(f"Year:{date[2]}")
 
 #Q3
-values = [89, 456, 4, 55, 232, 2, 54, 78, 65, 45, 12, 459, 35616, 45 ,78]
-total = 0
-i = 0
-max_num = values[0]
-
-while (i < len(values)):
-    total = total + values[i]
-    if values[i] > max_num:
-        max_num = values[i]
-    i+=1
-
-average = total / len(values)
-print(f"Total is {total}, Average is {average}. Largest number is {max_num} ")
+# values = [89, 456, 4, 55, 232, 2, 54, 78, 65, 45, 12, 459, 35616, 45 ,78]
+# total = 0
+# i = 0
+# max_num = values[0]
+#
+# while (i < len(values)):
+#     total = total + values[i]
+#     if values[i] > max_num:
+#         max_num = values[i]
+#     i+=1
+#
+# average = total / len(values)
+# print(f"Total is {total}, Average is {average}. Largest number is {max_num} ")
 
 # for num in values:
-#     total = total + num
+# total = total + num
+
+#Q4
+# full_name = input("Full name: ")
+# name = full_name.split(" ")
+# print(name)
+#
+# initials = ""
+# for word in name:
+#     initials += word[0].upper()
+# print(f"Your initial is {initials}")
+
+#Q5
+# array=[]
+# num = input("Enter a number: ")
+# while num.upper() != 'X':
+#     array.append(num)
+#     num = input("Enter a number: ")
+#
+# print(array)
+
+# arr = []
+# while True:
+#     ans = input("Enter a number: ")
+#     if ans == 'x':
+#         break
+#     arr.append(int(ans))
+# print("You entered: " + str(arr))
+
+
+#Q6
+num = input("Enter a large number: ")
+array = []
+total_text = ""
+total = 0
+i = 0
+
+for digit in str(num):
+    array.append(digit)
+
+while i < len(array):
+    total_text = total_text+array[i]
+
+    total+=int(array[i])
+    if i < len(array)-1:
+        total_text += "+"
+    i+=1
+print(f"Sum of the digits:{total_text} = {total}")
+
+#Q7
+
+
