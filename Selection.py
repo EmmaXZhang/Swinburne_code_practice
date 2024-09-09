@@ -35,9 +35,37 @@
 #     print(f"{num} is even")
 
 #Q1
-value = [66, 43, 1, 6, 2, 99, 4]
-for num in value:
-    if num < 10:
-        print(f"{num}")
+# value = [66, 43, 1, 6, 2, 99, 4]
+# for num in value:
+#     if num < 10:
+#         print(f"{num}")
 
 #Q2
+# t1 = input("Enter the date in the form dd/mm/yyyy: ")
+# date = t1.split("/")
+#
+# print(f"Day:{date[0]}")
+# print(f"Month:{date[1]}")
+# print(f"Year:{date[2]}")
+
+#Q3
+values = [89, 456, 4, 55, 232, 2, 54, 78, 65, 45, 12, 459, 35616, 45 ,78]
+total = 0
+i = 0
+
+while (i < len(values)):
+    total = total + values[i]
+    i+=1
+
+average = total / len(values)
+max_num = values[0]
+i=0
+while (i < len(values)):
+    if values[i] > max_num:
+        max_num = values[i]
+    i+=1
+
+print(f"Total is {total}, Average is {average}. Largest number is {max_num} ")
+
+# for num in values:
+#     total = total + num
