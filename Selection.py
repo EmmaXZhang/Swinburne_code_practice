@@ -52,19 +52,15 @@
 values = [89, 456, 4, 55, 232, 2, 54, 78, 65, 45, 12, 459, 35616, 45 ,78]
 total = 0
 i = 0
+max_num = values[0]
 
 while (i < len(values)):
     total = total + values[i]
-    i+=1
-
-average = total / len(values)
-max_num = values[0]
-i=0
-while (i < len(values)):
     if values[i] > max_num:
         max_num = values[i]
     i+=1
 
+average = total / len(values)
 print(f"Total is {total}, Average is {average}. Largest number is {max_num} ")
 
 # for num in values:
