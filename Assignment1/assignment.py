@@ -8,7 +8,7 @@ quantity_in_stock=[]
 supplier=[]
 
 # load data in matrix
-csv_file = "data.csv"
+csv_file = "product_data.csv"
 matrix = []
 
 
@@ -19,23 +19,12 @@ with open(csv_file, mode='r') as product_inventory:
     next(product_data)
     # add product detail data to matrix format
     for row in product_data:
-        # matrix.append(row)-----------------------
         product_id.append(int(row[0]))
         product_name.append(row[1])
         category.append(row[2])
         price.append(float(row[3]))
         quantity_in_stock.append(int(row[4]))
         supplier.append(row[5])
-
-#------------ load data in parallel arrays-------------
-# for row in matrix:
-#     product_id.append(row[0])
-#     product_name.append(row[1])
-#     category.append(row[2])
-#     price.append(row[3])
-#     quantity_in_stock.append(row[4])
-#     supplier.append(row[5])
-
 
 
 # print product inventory data in format
