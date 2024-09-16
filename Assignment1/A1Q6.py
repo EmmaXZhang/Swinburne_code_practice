@@ -32,6 +32,7 @@ def load_record(file):
             prices.append(float(row[3]))
             quantity_in_stock.append(int(row[4]))
             suppliers.append(row[5])
+    print("The record has been loaded successfully.")
 
 # Display current array data
 def display_data():
@@ -44,26 +45,32 @@ def display_data():
 # Add record -> add value to array
 # process: add record to array
 def add_data():
+    # create new id variable
+    if product_ids:
+        new_id = product_ids[-1] + 1
+    else:
+        new_id=1001
+    product_ids.append(new_id)
+
     product_name = input("Product Name: ")
     category = input("Category: ")
     price = float(input("Price: "))
     stock = int(input("Quantity in Stock: "))
     supplier = input("Supplier: ")
-    # create new id variable
-    new_id = product_ids[-1] + 1 if product_ids else 1001
-    product_ids.append(new_id)
+
     product_names.append(product_name)
     categories.append(category)
     prices.append(price)
     quantity_in_stock.append(stock)
     suppliers.append(supplier)
+    print("The record has been added successfully.")
 
 # Delete record from array
 # delete record from array
 def delete_data():
     # no products in the file
     if not product_ids:
-        print("No records to delete.")
+        print("No records available to delete.")
         return
     # else display data
     display_data()
@@ -72,7 +79,7 @@ def delete_data():
     # In a while True loop, the loop itself will run indefinitely until you explicitly break out of it.
     while True:
         try:
-            delete_id = int(input("Enter the Product Id to be deleted: "))
+            delete_id = int(input("Please enter the Product Id to be deleted: "))
             if delete_id in product_ids:
                 break
             else:
@@ -93,10 +100,11 @@ def delete_data():
 def save_data():
     with open(csv_file, mode="w", newline="") as product_inventory:
         writer = csv.writer(product_inventory)
-        writer.writerow(["Product_Id", "Product_Name", "Category", "Price", "Quantity_in_Stock", "Supplier"])
+        writer.writerow(["Product ID", "Product Name", "Category", "Price", "Quantity in Stock", "Supplier"])
         for i in range(len(product_ids)):
             writer.writerow([product_ids[i], product_names[i], categories[i], prices[i], quantity_in_stock[i], suppliers[i]])
-        print("Records saved successfully.")
+
+    print("Records saved successfully.")
     # load new data to array
     load_record(csv_file)
 
@@ -109,18 +117,14 @@ def exit_app():
 def menu():
     # keep loop until break or exit() function is called
     while True:
-        print("\n Choose menu option: \n 1.Load records \n 2.Display \n 3.Add record \n 4.Delete record \n 5.Save records \n 6.Exit")
-        user_choice = int(input("Select: "))
-
+        user_choice = int(input("\n Choose menu option: \n 1.Load records \n 2.Display \n 3.Add record \n 4.Delete record \n 5.Save records \n 6.Exit \n Select: "))
         match user_choice:
             case 1:
                 load_record(csv_file)
-                print("Data load successfully.")
             case 2:
                 display_data()
             case 3:
                 add_data()
-                print("Data added successfully.")
             case 4:
                 delete_data()
             case 5:
