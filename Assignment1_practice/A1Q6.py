@@ -66,7 +66,6 @@ def add_data():
     print("The record has been added successfully.")
 
 # Delete record from array
-# delete record from array
 def delete_data():
     # no products in the file
     if not product_ids:
